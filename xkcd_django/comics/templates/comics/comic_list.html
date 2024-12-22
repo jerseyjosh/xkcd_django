@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comics List</title>
+</head>
+<body>
+    <h1>Comics</h1>
+    <ul>
+        {% for comic in comics %}
+        <li>
+            <strong>{{ comic.comic_number }}: {{ comic.title }}</strong><br>
+            <img src="{{ comic.image_url }}" alt="{{ comic.alt_text }}" style="max-width: 300px;"><br>
+            <em>Published on: {{ comic.publish_date }}</em><br>
+            <p>{{ comic.alt_text }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
